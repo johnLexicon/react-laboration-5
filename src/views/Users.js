@@ -2,7 +2,7 @@ import UsersList from '../components/users/UsersList';
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchUsers } from '../store/users';
-const NewUser = () => {
+const Users = () => {
   const dispatch = useDispatch();
   const state = useSelector((state) => state);
 
@@ -21,10 +21,10 @@ const NewUser = () => {
   };
   return (
     <div>
-      <h1>Add User</h1>
+      <h1>Existing Users</h1>
       {renderUsers()}
     </div>
   );
 };
 
-export default NewUser;
+export default Users;

@@ -1,7 +1,8 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './views/Home';
+import Users from './views/Users';
 import About from './views/About';
-import NewUser from './views/NewUser';
+import ManageUser from './views/ManageUser';
 import Navbar from './components/Navbar';
 function App() {
   return (
@@ -12,8 +13,14 @@ function App() {
           <Route exact path="/">
             <Home></Home>
           </Route>
+          <Route exact path="/users">
+            <Users />
+          </Route>
           <Route exact path="/new">
-            <NewUser />
+            <ManageUser title="New User" />
+          </Route>
+          <Route exact path="/edit">
+            <ManageUser title="Edit User" />
           </Route>
           <Route exact path="/about">
             <About></About>
