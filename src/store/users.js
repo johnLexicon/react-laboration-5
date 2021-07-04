@@ -17,24 +17,6 @@ export const fetchUsers = () => async (dispatch, getState) => {
   }
 };
 
-// export const getUsers = () => {
-//   return async (dispatch, getState) => {
-//     const actionContent = {
-//       type: GET_USERS,
-//       payload: {},
-//     };
-//     try {
-//       const response = await Axios.get();
-//       actionContent.payload.users = response.data;
-//     } catch (err) {
-//       console.log(err);
-//       actionContent.payload.users = [];
-//     } finally {
-//       dispatch(actionContent);
-//     }
-//   };
-// };
-
 const initState = {
   users: [],
   loading: false,
