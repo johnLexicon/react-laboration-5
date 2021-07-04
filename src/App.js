@@ -19,7 +19,7 @@ function App() {
           <Route exact path="/new">
             <ManageUser title="New User" />
           </Route>
-          <Route exact path="/edit">
+          <Route exact path="/edit/:id">
             <ManageUser title="Edit User" />
           </Route>
           <Route exact path="/about">
