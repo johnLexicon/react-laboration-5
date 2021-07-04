@@ -1,10 +1,11 @@
+import UserCard from './UserCard';
 const UsersList = ({ users }) => {
   return (
-    <div>
+    <div className="d-flex flex-wrap justify-content-center">
       {users.length ? (
-        users.map((user) => <div key={user.id}>{user.name}</div>)
+        users.map((user) => <UserCard key={user._id} user={user} />)
       ) : (
-        <h3>Users empty list</h3>
+        <h3>There are no existing user at the moment</h3>
       )}
     </div>
   );
